@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIShym - Умный помощник</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Стилизацион.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 id="app-title">AIShym</h1>
+            <span class="tagline">Ваш умный помощник</span>
+        </div>
+        <nav>
+            <button class="theme-toggle" onclick="toggleDarkMode()">Сменить тему</button>
+            <select id="language-selector" onchange="changeLanguage()">
+                <option value="ru">Русский</option>
+                <option value="kk">Қазақ</option>
+                <option value="en">English</option>
+            </select>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Левая панель для истории -->
+        <aside class="history-panel">
+            <h2 id="history-title">История запросов</h2>
+            <div id="history-list">
+                <!-- Здесь будут отображаться запросы и ответы -->
+            </div>
+        </aside>
+
+        <!-- Основная панель чата -->
+        <main class="chat-panel">
+            <div id="chat-window">
+                <!-- Взаимодействие с AIShym -->
+            </div>
+            <div class="input-controls">
+                <textarea id="user-input" placeholder="Введите запрос..."></textarea>
+                <button class="send-btn" onclick="sendQuery()">Отправить</button>
+                <button class="voice-btn" onclick="startVoiceInput()">🎤 Голосовой ввод</button>
+            </div>
+        </main>
+
+        <!-- Правая панель для категорий -->
+        <aside class="category-panel">
+            <h2 id="categories-title">Категории</h2>
+            <div class="categories">
+                <button class="category-btn" id="category-tech" onclick="selectCategory('Технолог')">Технолог</button>
+                <button class="category-btn" id="category-science" onclick="selectCategory('Наук')">Наук</button>
+                <button class="category-btn" id="category-music" onclick="selectCategory('Музыкант')">Музыкант</button>
+                <button class="category-btn" id="category-it" onclick="selectCategory('Программист')">Программист</button>
+                <button class="category-btn" id="category-design" onclick="selectCategory('Дизайнер')">Дизайнер</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© 2024 AIShym. Все права защищены.</p>
+    </footer>
+
+    <script src="scriptEbich.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,177 @@
+/* Основной стиль */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #0f0f0f, #1a1a1a, #141414);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #181818, #252525, #1f1f1f);
+    padding: 15px 30px;
+    color: white;
+    border-bottom: 2px solid #1e90ff;
+}
+
+header .logo h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    color: #1e90ff;
+    text-shadow: 0 0 10px #1e90ff;
+}
+
+header .tagline {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav button, nav select {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+}
+
+nav button:hover, nav select:hover {
+    background-color: #00bfff;
+    transform: translateY(-3px);
+}
+
+/* Основная структура */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Панели */
+.history-panel, .chat-panel, .category-panel {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.history-panel {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.chat-panel {
+    width: 55%;
+    margin-right: 20px;
+}
+
+.category-panel {
+    width: 20%;
+}
+
+.history-panel:hover, .chat-panel:hover, .category-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(30, 144, 255, 0.8), 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Стили для категорий */
+.category-btn {
+    background-color: #292929;
+    border: 2px solid #1e90ff;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+}
+
+.category-btn:hover {
+    background-color: #1e90ff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+}
+
+/* Чат-панель */
+.chat-panel #chat-window {
+    height: 400px;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+.input-controls {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 14px;
+    resize: none;
+    background-color: #292929;
+    color: white;
+}
+
+.send-btn, .voice-btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+    font-weight: 600;
+}
+
+.send-btn:hover, .voice-btn:hover {
+    background-color: #00bfff;
+    transform: translateY(-3px);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .history-panel, .chat-panel, .category-panel {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
